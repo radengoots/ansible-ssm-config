@@ -1,5 +1,6 @@
 # ssm-seelog-config
 
+![Build Status](https://travis-ci.org/radengoots/ansible-ssm-config.svg?branch=master)
 Configure seelog
 
 ## Requirements
