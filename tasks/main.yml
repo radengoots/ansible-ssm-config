@@ -1,0 +1,19 @@
+---
+- name: "Create folder if it doesn't exist"
+  file:
+    path: "{{ ssm_agent_configuration_dir }}"
+    state: directory
+    mode: 0755	
+- name: "Create create/replace seelog.xml configuration file"
+  template:
+    src: seelog.xml.j2
+    dest: "{{ ssm_agent_configuration_dir }}/seelog.xml"
+    owner: root
+    group: root
+    mode: 0644
+- name: "Display seelog.xml content"
+  debug:
+    var: item
+    verbosity: 3
+  with_file:
+    "{{ ssm_agent_configuration_dir }}/seelog.xml"
