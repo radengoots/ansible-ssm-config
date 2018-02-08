@@ -13,6 +13,8 @@ ssm agent is installed
 
 ## Dependencies
 
+none
+
 ## Example Playbook
 
 ```
