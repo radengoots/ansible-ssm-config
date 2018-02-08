@@ -2,7 +2,7 @@
 - hosts: all
   become: True
   roles:
-    - name: ssm-seelog-config
+    - name: ansible-ssm-config 
       ssm_agent_configuration_dir: "{{ lookup('env','TRAVIS_BUILD_DIR') }}"
       log_group_name: "error.log"
 
